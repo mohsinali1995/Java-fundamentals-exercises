@@ -1,0 +1,18 @@
+//we have two types of boxes, big boxes that weigh 5 kilo each, and small boxes that weigh 1 kilo each.
+//we are given a target weight and number of each size boxes.
+//we need to determine if the target will be fulfilled with the given amount of boxes or not.
+//return false if target is not met.
+
+public class PackBoxes {
+    public static boolean canPack(int bigBox, int smallBox, int goal){
+        if ((bigBox < 0) || (smallBox < 0) || (goal < 0)) { 
+            return false;
+        }
+ 
+        while (bigBox > 0 && goal >= 5) { 
+            goal -= 5;
+            bigBox--;
+        }
+        return smallBox >= goal; // 
+    }
+}
