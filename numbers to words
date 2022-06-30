@@ -1,0 +1,21 @@
+//input a number or numbers (int) and output words that represent those numbers. 
+//such as input: 123 will return, "one two three"
+//a good example to demonstrate the usage of switch statements.
+
+public class NumberInWord {
+ 
+    public static void printNumberInWord(int number) {
+ 
+        String[] numbersInWords = new String[]{"ZERO", "ONE", "TWO", "THREE",
+                "FOUR", "FIVE", "SIX", "SEVEN", "EIGHT", "NINE"};
+ 
+        switch (number) {
+            case 0: case 1: case 2: case 3: case 4:
+            case 5: case 6: case 7: case 8: case 9:
+                System.out.println(numbersInWords[number]);
+                break;
+            default:
+                System.out.println("OTHER");
+        }
+    }
+}
