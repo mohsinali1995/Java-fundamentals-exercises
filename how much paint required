@@ -1,0 +1,16 @@
+//given the measurements of two sides of a wall, how much area one paint bucket can cover and, number of paint buckets on hand, calculate how many more buckets are needed.
+
+
+public class PaintJob {
+    public static int getBucketCount(double width, double height, double areaPerBucket, int BucketsAvailable){
+        return (width<=0 || height<=0 || areaPerBucket<=0 || BucketsAvailable<0) ? -1 : (int) Math.ceil((width*height-(areaPerBucket*BucketsAvailable))/ areaPerBucket);
+    }
+    
+    public static int getBucketCount(double width, double height, double areaPerBucket){
+        return (width<=0 || height<=0 || areaPerBucket<=0) ? -1 : (int) Math.ceil(width*height/areaPerBucket);
+    }
+    
+    public static int getBucketCount(double area, double areaPerBucket){
+        return (area<=0 || areaPerBucket<=0) ? -1 : (int) Math.ceil(area/areaPerBucket);
+    }
+}
